@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Quản lý danh sách học viên</h1>
+    <form id="student-form">
+        <div>
+            <h2>Thông tin học sinh</h2>
+            <table>
+                <tr>
+                    <td>Họ và tên:</td>
+                    <td class="tr"><input type="text" id="name" required></td>
+                    <td><span id="name-error" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td class="tr"><input type="email" id="email" required></td>
+                    <td><span id="email-error" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại:</td>
+                    <td class="tr"><input type="text" id="phone" required></td>
+                    <td><span id="phone-error" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>Quê quán:</td>
+                    <td class="tr"><input type="text" id="hometown" required></td>
+                    <td><span id="hometown-error" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td>Giới tính:</td>
+                    <td class="tr">
+                        <select id="gender">
+                            <option value="Male" id="Male">Nam</option>
+                            <option value="Female" id="Female">Nữ</option>
+                            <option value="Other" id="Other">Khác</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="3"><button type="button" id="save" onclick="addStudent()">Lưu</button></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <h2>Danh sách học sinh</h2>
+
+    <input type="text" id="search">
+    <button type="button" id="sort-a">A-Z</button>
+    <button type="button" id="sort-z">Z-A</button>
+
+    <table id="student-table">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Quê quán</th>
+                <th>Giới tính</th>
+                <th>Sửa thông tin</th>
+                <th>Xóa thông tin</th>
+            </tr>
+        </thead>
+        <tbody id="student-body">
+        </tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
+
+</html>
